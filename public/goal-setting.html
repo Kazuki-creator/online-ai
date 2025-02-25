@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>目標設定</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 必要に応じて、goal-setting.js（クライアントサイドの処理）があれば読み込む -->
+  <script defer src="goal-setting.js"></script>
+</head>
+<body>
+  <!-- ヘッダー（共通UI） -->
+  <header class="header">
+    <div class="logo">
+      <img src="https://cdn.glitch.global/d6b52f0f-967d-4d53-8d7f-3cfb840bae62/AI%20Supprot%20System%20(1000%20x%20200%20px).png?v=1740035748637" alt="AI Support System Logo">
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- サイドバー（共通UI） -->
+    <aside class="sidebar">
+      <h2>ホーム</h2>
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+      </ul>
+      <!-- 他のメニュー項目は適宜追加 -->
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="content">
+      <h1>目標設定</h1>
+      <p>あなたの短期・中期目標やビジョンについて、以下に入力してください。</p>
+      <form id="goal-setting-form">
+        <textarea id="goal-input" rows="5" placeholder="ここに目標やビジョンを入力してください"></textarea>
+        <br>
+        <button type="submit">送信</button>
+      </form>
+      <div id="goal-output"></div>
+      <!-- 目標設定の詳細プロンプトを表示するためのiframe（必要に応じて） -->
+      <iframe src="goal-setting_prompt.html" style="width:100%; height:200px; border:0;"></iframe>
+    </main>
+  </div>
+</body>
+</html>

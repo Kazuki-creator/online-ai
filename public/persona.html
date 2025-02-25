@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ペルソナ選定</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ペルソナ選定</h1>
+    <p>あなたの商品を入力してください。AIがターゲットを考えます。</p>
+
+    <!-- 入力フォーム -->
+    <div class="form-group">
+      <input type="text" id="persona-input" placeholder="あなたの商品を入力">
+      <button id="persona-submit-btn" class="button">送信</button>
+    </div>
+
+    <!-- AIの応答を表示 -->
+    <div id="message-box">
+      <p id="message">GPTの応答がここに表示されます</p>
+    </div>
+
+    <!-- メインページに戻るボタン -->
+    <a href="index.html" class="button">メインページへ戻る</a>
+  </div>
+
+  <script type="module" src="persona.js"></script>
+</body>
+</html>

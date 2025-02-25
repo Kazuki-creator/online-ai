@@ -1,0 +1,187 @@
+/* ==========================
+   全体設定
+   ========================== */
+body {
+  font-family: Arial, sans-serif; /* ページ全体のフォントを Arial（サンセリフ体）に設定 */
+  background-color: #1E1E2F; /* 背景色をダークブルー寄りに設定（ダークテーマ） */
+  color: #FFFFFF; /* 文字色を白に設定 */
+  margin: 0; /* ブラウザのデフォルトマージンを削除 */
+  padding: 0; /* ブラウザのデフォルトパディングを削除 */
+  display: flex; /* レイアウトをフレックスボックスで構築 */
+  flex-direction: column; /* フレックスアイテムを縦方向に配置 */
+}
+
+/* ==========================
+   ヘッダー設定
+   ========================== */
+.header {
+  background-color: #252C48; /* ヘッダー部分の背景色を設定 */
+  padding: 0px; /* ヘッダー内の上下の余白を削除 */
+  position: fixed; /* ヘッダーを画面上部に固定 */
+  top: 0; /* 画面上端に配置 */
+  left: 0; /* 画面左端に配置 */
+  width: 100%; /* 横幅を全体に広げる */
+  height: 80px; /* ヘッダーの高さを80pxに設定 */
+  display: flex; /* ヘッダー内の要素をフレックスボックスで配置 */
+  align-items: center; /* 垂直方向に中央揃え */
+  justify-content: flex-start; /* 水平方向は左寄せに配置 */
+  z-index: 1000; /* 重なり順序を高く設定し、他の要素より前面に表示 */
+}
+
+.logo {
+  margin-left: 20px; /* ロゴ画像の左側に20pxの余白を設定 */
+}
+
+.logo img {
+  height: 80px; /* ロゴ画像の高さをヘッダーの高さに合わせる */
+}
+
+/* ==========================
+   メインコンテンツ設定
+   ========================== */
+.container {
+  width: 100%; /* ページ全体の最大幅を2800pxに設定 */
+  padding: 80px 20px; /* コンテナ内部に100pxの余白を設定 */
+  display: flex; /* 内部のレイアウトをフレックスボックスで構築 */
+}
+
+/* ==========================
+   メインコンテンツエリア
+   ========================== */
+/* メインコンテンツエリア（.content）の設定 */
+/* サイドバーが固定なので、その分を避けるために左側に余白を追加 */
+.content {
+  margin-left: 270px; /* サイドバーの幅分の余白を確保 */
+  padding: 10px; /* コンテンツ内部の余白 */
+  width: calc(100% - 200px);  /* ここでwidthを設定すると、ブラウザのサイズ変動に柔軟に対応できます */
+  text-align: left;                  /* テキストは左寄せ */
+
+}
+
+/* ==========================
+   サイドバー（ナビゲーション）
+   ========================== */
+.sidebar {
+  width: 200px; /* サイドバーの幅を200pxに設定 */
+  background-color: #2A2A3A; /* サイドバーの背景色を設定 */
+  /* background-color: #252C48; /* ヘッダーと同じ背景色に変更する場合のコメントアウト */
+  padding: 30px; /* サイドバー内部に30pxの余白を設定 */
+  height: calc(100vh - 80px); /* 画面の高さからヘッダーの高さを引いた高さに設定 */
+  position: fixed; /* サイドバーを固定配置にする */
+  left: 0; /* 画面左端に配置 */
+  top: 70px; /* ヘッダー分だけ下にずらして配置 */
+}
+
+.sidebar h2 {
+  color: #FFFFFF; /* セクション見出しの文字色を白に設定 */
+  font-size: 20px; /* フォントサイズを20pxに設定 */
+  margin-bottom: 15px; /* 下に15pxの余白を設定 */
+  padding-bottom: 5px; /* 下に5pxの内側余白を設定 */
+  border-bottom: 1px solid #666666; /* 下線を追加しセクションを区切る */
+}
+
+.sidebar ul {
+  list-style: none; /* リストのデフォルトの箇条書きマーカーを削除 */
+  padding: 0; /* パディングを削除 */
+}
+
+.sidebar li {
+  margin-bottom: 10px; /* 各リスト項目の下に10pxの余白を設定 */
+  padding: 5px 0; /* 上下に5pxのパディングを設定 */
+  font-size: 16px; /* フォントサイズを16pxに設定 */
+  color: #CCCCCC; /* 文字色を薄いグレーに設定 */
+  cursor: pointer; /* マウスカーソルをポインターに変更 */
+  transition: color 0.3s; /* 色変化のトランジション効果を0.3秒に設定 */
+}
+
+.sidebar li:hover {
+  color: #FFFFFF; /* ホバー時に文字色を白に変更 */
+}
+
+/* お問い合わせセクション */
+.sidebar .contact {
+  margin-top: 20px; /* 上に20pxの余白を設定 */
+  border-top: 1px solid #444444; /* 上線を追加してセクションを区切る */
+  padding-top: 10px; /* 上に10pxの内側余白を設定 */
+  font-size: 16px; /* フォントサイズを16pxに設定 */
+  color: #CCCCCC; /* 文字色を薄いグレーに設定 */
+}
+
+
+
+/* ==========================
+   見出しデザイン
+   ========================== */
+h1 {
+  color: #FFFFFF; /* 見出しの文字色を白に設定 */
+  font-size: 28px; /* フォントサイズを28pxに設定 */
+  margin-bottom: 20px; /* 下に20pxの余白を設定 */
+}
+
+h2.section-title {
+  margin-top: 30px; /* 上に30pxの余白を設定 */
+  font-size: 24px; /* フォントサイズを24pxに設定 */
+  color: #FFFFFF; /* 文字色を白に設定 */
+  text-align: left; /* 左寄せに設定 */
+}
+
+/* ==========================
+   小項目（h3ごとに枠で囲む）
+   ========================== */
+/* グリッドレイアウトの設定（アイテムコンテナ） */
+.items-container {
+  display: grid;  
+  /* 固定幅の列を自動で並べる（250pxの幅で、できるだけ多くの列を表示） */
+  grid-template-columns: repeat(auto-fill, 250px);
+  /* 各行の高さを固定（ここでは100pxに設定） */
+  grid-auto-rows: 80px;
+  gap: 50px; /* 各アイテム間の隙間を50pxに設定 */
+  margin-bottom: 30px;
+  margin-left: 0px;
+  /* 中央寄せを解除して、左詰めにする */
+  justify-content: start;
+}
+
+/* グリッドアイテム（カード）の設定 */
+.item {
+  width: 250px;  /* アイテムの横幅を250pxに固定 */
+  height: 80px; /* アイテムの縦幅を100pxに固定 */
+  padding: 15px; /* 内側の余白 */
+  background: linear-gradient(135deg, #6E44FF, #8E54E9); /* 背景のグラデーション */
+  border-radius: 8px; /* 角を丸める */
+  text-align: center; /* テキストを中央揃え */
+  cursor: pointer; /* マウスオーバー時にポインターを表示 */
+  transition: transform 0.3s, background-color 0.3s; /* ホバー時のアニメーション */
+}
+
+.item:hover {
+  transform: translateY(-5px); /* ホバー時に上に5px移動 */
+  background: linear-gradient(135deg, #5A3BD8, #7A4BCE); /* ホバー時の背景変更 */
+}
+
+.item h3 {
+  margin: 0; /* 見出しの余白をリセット */
+  font-size: 18px; /* フォントサイズを18pxに設定 */
+  color: #FFFFFF; /* 文字色を白に設定 */
+}
+
+.item p {
+  margin-top: 10px; /* 見出し下に10pxの余白を設定 */
+  color: #DADADA; /* 文字色を明るいグレーに設定 */
+  font-size: 14px; /* フォントサイズを14pxに設定 */
+}
+
+/* ==========================
+   リンクスタイルのリセット
+   ========================== */
+.item a {
+  text-decoration: none !important; /* リンクの下線などを完全に削除 */
+  color: inherit !important; /* 親要素の色を継承 */
+  display: block; /* ブロック要素にして全体をクリック可能に */
+  width: 100%; /* 親要素の幅に合わせる */
+  height: 100%; /* 親要素の高さに合わせる */
+}
+
+#message {
+  white-space: pre-wrap; /* テキスト内の改行をそのまま反映して表示 */
+}
